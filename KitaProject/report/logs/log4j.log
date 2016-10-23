@@ -1,0 +1,15 @@
+[23/10/2016 11:17:06] actionLog - [info] Executing: open (https://accounts.google.com)
+[23/10/2016 11:17:10] actionLog - [info] Executing: sendKeys (id=Email,"id")
+[23/10/2016 11:17:11] actionLog - [info] Executing: sendKeys (name=Email,"name")
+[23/10/2016 11:17:11] actionLog - [info] Executing: sendKeys (css=#Email,"css")
+[23/10/2016 11:17:11] actionLog - [info] Executing: sendKeys (xpath=//input[@id='Email'],"xpath")
+[23/10/2016 11:17:12] actionLog - [info] Executing: clear (id=Email)
+[23/10/2016 11:17:12] actionLog - [info] Executing: click (id=next)
+[23/10/2016 11:17:16] actionLog - [info] Executing: getText (id=errormsg_0_Email)
+[23/10/2016 11:17:16] actionLog - [info] Executing: close
+[23/10/2016 11:17:28] actionLog - [info] Executing: open (https://accounts.google.com)
+[23/10/2016 11:17:31] actionLog - [info] Executing: sendKeys (id=Email,"nctoan500@gmail.com")
+[23/10/2016 11:17:31] actionLog - [info] Executing: click (id=next)
+[23/10/2016 11:17:37] actionLog - [info] Executing: click (id=signIn)
+[23/10/2016 11:17:41] actionLog - [info] Executing: getText (id=errormsg_0_Passwd)
+[23/10/2016 11:17:41] actionLog - [info] Executing: close

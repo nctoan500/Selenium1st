@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="45834" started-at="2016-10-23T04:16:55Z" finished-at="2016-10-23T04:17:41Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="45834" started-at="2016-10-23T04:16:55Z" finished-at="2016-10-23T04:17:41Z">
+      <class name="org.webdriver.temp.DemoWithWebDriverAction">
+        <test-method status="PASS" signature="loginWithBlankField()[pri:0, instance:org.webdriver.temp.DemoWithWebDriverAction@34340fab]" name="loginWithBlankField" duration-ms="20368" started-at="2016-10-23T11:16:55Z" finished-at="2016-10-23T11:17:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBlankField -->
+        <test-method status="PASS" signature="testLoginWithBlankkPassword()[pri:0, instance:org.webdriver.temp.DemoWithWebDriverAction@34340fab]" name="testLoginWithBlankkPassword" duration-ms="25429" started-at="2016-10-23T11:17:16Z" finished-at="2016-10-23T11:17:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithBlankkPassword -->
+      </class> <!-- org.webdriver.temp.DemoWithWebDriverAction -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
