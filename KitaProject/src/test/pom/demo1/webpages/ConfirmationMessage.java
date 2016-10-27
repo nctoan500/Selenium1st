@@ -1,4 +1,4 @@
-package pom.demo1.page;
+package pom.demo1.webpages;
 
 import org.openqa.selenium.WebDriver;
 

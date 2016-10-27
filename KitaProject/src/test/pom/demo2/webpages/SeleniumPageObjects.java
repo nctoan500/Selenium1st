@@ -1,4 +1,4 @@
-package pom.demo2.page;
+package pom.demo2.webpages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,12 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SeleniumPageObjects {
-	public SeleniumPageObjects(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+	public SeleniumPageObjects() {
 	}
 
-	public SeleniumPageObjects() {
-		// TODO Auto-generated constructor stub
+	public SeleniumPageObjects(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(linkText = "Download")

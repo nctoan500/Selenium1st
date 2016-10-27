@@ -1,4 +1,4 @@
-package pom.demo1.test;
+package pom.demo1.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,9 +7,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pom.demo1.page.ConfirmationMessage;
-import pom.demo1.page.ContactPage;
-import pom.demo1.page.HomePage;
+import pom.demo1.webpages.ConfirmationMessage;
+import pom.demo1.webpages.ContactPage;
+import pom.demo1.webpages.HomePage;
 
 public class TestDemo {
 	WebDriver driver;
