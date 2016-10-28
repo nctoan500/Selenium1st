@@ -1,5 +1,6 @@
 package pom.demo2.tests;
 
+import org.kita.utils.ExcelLib_JXL;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
@@ -13,6 +14,9 @@ public class GoogleSearchTest {
 
 	@Test
 	public void testGoogle() throws InterruptedException {
+		ExcelLib_JXL excel = new ExcelLib_JXL(".\\resources\\excel files\\test_jxl.xls");
+		System.out.println(excel.GetCellValue(0, 1));
+
 		driver.navigate().to("https://google.com");
 
 		// Object for page
@@ -20,7 +24,7 @@ public class GoogleSearchTest {
 		GoogleHomePageObjects page = new GoogleHomePageObjects(driver);
 
 		// Search for Selenium
-		page.SearchGoogle("Selenium");
+		page.SearchGoogle(excel.GetCellValue(0, 2));
 		Thread.sleep(3000);
 
 		// CLick the Selenium Web Site link, will return the Selenium Web Site
