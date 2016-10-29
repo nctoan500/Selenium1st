@@ -1,4 +1,4 @@
-package pom.demo2.webpages;
+package pom.demo2_ExeAuto.webpages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
