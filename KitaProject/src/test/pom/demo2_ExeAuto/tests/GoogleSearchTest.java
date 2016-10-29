@@ -16,7 +16,7 @@ public class GoogleSearchTest {
 	@Test
 	public void testGoogle() throws InterruptedException, BiffException, IOException {
 
-		ExcelLib_JXL excel = new ExcelLib_JXL(".\\resources\\excel files\\test_jxl.xls");
+		ExcelLib_JXL excel = new ExcelLib_JXL("Resources\\Excel\\test_jxl.xls");
 
 		WebDriver driver = new FirefoxDriver();
 		driver.navigate().to("https://google.com");
@@ -41,6 +41,7 @@ public class GoogleSearchTest {
 
 		// Click Download tab
 		selPage.ClickDownload();
+		Thread.sleep(1000);
 		selPage.NavigateHome();
 
 	}

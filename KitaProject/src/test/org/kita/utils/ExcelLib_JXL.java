@@ -13,12 +13,15 @@ public class ExcelLib_JXL {
 	public Sheet wrksheet;
 	public Workbook wrkbook = null;
 	public Hashtable<String, Integer> dict = new Hashtable<String, Integer>();
+	public Hashtable<Integer, String> flaggedMethod = new Hashtable<Integer, String>();
 
 	// Create a Constructor
-	public ExcelLib_JXL(String ExcelSheetPath) throws BiffException, IOException {
+	public ExcelLib_JXL(String ExcelSheetPath) throws BiffException,
+			IOException {
 		// Initialize
 		wrkbook = Workbook.getWorkbook(new File(ExcelSheetPath));
-		// For Demo purpose the excel sheet path is hardcoded, but not recommended :)
+		// For Demo purpose the excel sheet path is hardcoded, but not
+		// recommended :)
 		wrksheet = wrkbook.getSheet("Sheet1");
 	}
 
@@ -38,7 +41,8 @@ public class ExcelLib_JXL {
 
 	// Create Column Dictionary to hold all the Column Names
 	public void ColumnDictionary() {
-		// Iterate through all the columns in the Excel sheet and store the value in Hashtable
+		// Iterate through all the columns in the Excel sheet and store the
+		// value in Hashtable
 		for (int col = 0; col < wrksheet.getColumns(); col++) {
 			dict.put(ReadCell(col, 0), col);
 		}
@@ -56,13 +60,15 @@ public class ExcelLib_JXL {
 	}
 
 	// Get all the Flagged Methods from Excel sheet
-	public Hashtable GetFlaggedMethods(String ColumnName) {
+	public Hashtable<Integer, String> GetFlaggedMethods(String ColumnName) {
 		try {
 			int methodcount = 1; // Keycount flag will track of method count
 			for (int row = 0; row < RowCount(); row++) {
 				if (ReadCell(ColumnName, row).equals("Y")) {
-					flaggedMethod.put(methodcount, ReadCell("Function", row) + ";" + ReadCell("ExcelName", row));
+					flaggedMethod.put(methodcount, ReadCell("Function", row)
+							+ ";" + ReadCell("ExcelName", row));
 					methodcount++;
+					System.out.println("6");
 				}
 			}
 		} catch (Exception e) {

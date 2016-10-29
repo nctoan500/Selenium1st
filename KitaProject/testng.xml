@@ -1,37 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="1" parallel="classes" thread-count="5">
-  <test name="Test1">
-    <classes>
-      <class name="pom.demo2.tests.GoogleSearchTest"/>
-      <class name="pom.demo1.tests.TestDemo"/>
-    </classes>
-  </test> <!-- Test -->
-  
-  <test name="Test2">
-    <classes>
-      <class name="webdriver.temp.DemoWithWebDriverAction"/>
-      <class name="webdriver.temp.LoginTest"/>
-    </classes>
-  </test>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="SeleniumJavaFramework">
+	<parameter name="TestMethod1" value="Resources\\Excel\\TestMethod1.xls" />
+	<parameter name="TestMethod2" value="Resources\\Excel\\TestMethod2.xls" />
+	<test name="testing" />
 </suite>
-
-
-<!-- Test parallel many browser
-<suite name="Suite" verbose="1" parallel="classes" thread-count="5">
-  <test name="Test1">
-    <classes>
-      <class name="pom.demo2.test.GoogleSearchTest"/>
-      <class name="pom.demo1.test.TestDemo"/>
-    </classes>
-  </test>
-  
-  <test name="Test2">
-    <classes>
-      <class name="webdriver.temp.DemoWithWebDriverAction"/>
-      <class name="webdriver.temp.LoginTest"/>
-    </classes>
-  </test>
-</suite>
--->
-

@@ -1,6 +1,6 @@
 Download Firefox 46.0:  https://drive.google.com/file/d/0B0xTKZHqvT0lNzJNV2RqSnR2Mms/view?usp=sharing
 Test page for POM:		http://www.thetestroom.com/webapp/index.html
-File path:				.\\resources\\excel files\\test_jxl.xls
+File path:				Resources\\excel files\\test_jxl.xls
 
 
 
