@@ -35,15 +35,20 @@ public class FacebookLike {
 
 		if (driver.findElements(By.id("email")).size() != 0) {
 			driver.findElement(By.id("email")).sendKeys("nctoan500@gmail.com");
-			driver.findElement(By.id("pass")).sendKeys("");
+			driver.findElement(By.id("pass")).sendKeys("Toan@9492...");
 			driver.findElement(By.id("u_0_l")).click();
 		}
 		
 		// Loop product list
 		for (int rowCnt = 1; rowCnt < excelLib.RowCount(); rowCnt++) {
 			String url = excelLib.ReadCell(excelLib.GetCell("URL"), rowCnt);
+			String no = excelLib.ReadCell(excelLib.GetCell("No"), rowCnt);
 			driver.get(url);
-			System.out.println(url);
+			System.out.println(no + ". " + url);
+			
+			if (driver.findElements(By.className("UIFullPage_Container")).size() != 0) {
+				continue;
+			}
 			
 			Thread.sleep(2000);
 			
@@ -56,5 +61,7 @@ public class FacebookLike {
 
 			Thread.sleep(3000);
 		}
+		
+		driver.quit();
 	}
 }

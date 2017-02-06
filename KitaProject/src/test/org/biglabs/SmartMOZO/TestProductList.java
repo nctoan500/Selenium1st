@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import jxl.read.biff.BiffException;
 
@@ -20,8 +21,8 @@ import org.testng.annotations.Test;
 
 public class TestProductList {
 
-	public static final String DOMAIN = "https://mozosport.com";
-	public static final String PRODUCT_LIST_EXCEL_PATH = "Resources\\Excel\\Copy.xls";
+	public static final String DOMAIN = "http://192.168.1.76";
+	public static final String PRODUCT_LIST_EXCEL_PATH = "Resources\\Excel\\Product List.xls";
 	public static final String FOLDER_SCREENSHORT = "D:\\Smart Mozo";
 
 	static String rowNo;
@@ -43,6 +44,8 @@ public class TestProductList {
 	@Test
 	public void VerifyImageProductList() throws InterruptedException, IOException {
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		driver.get(DOMAIN);
 
 		// Loop product list
@@ -55,7 +58,8 @@ public class TestProductList {
 
 			// Open product detail
 			driver.get(fullURL);
-
+			Thread.sleep(1000);
+			
 			// Log
 			rowNo = excelLib.ReadCell(excelLib.GetCell("No"), rowCnt);
 			System.out.println(rowCnt + ". Open product URL: " + fullURL);
