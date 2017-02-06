@@ -17,9 +17,9 @@ public class HandleAlert {
  @BeforeTest
  public void setUp() throws Exception {
   DesiredCapabilities capabilities = new DesiredCapabilities();
-  capabilities.setCapability("deviceName", "ZX1B32FFXF");
+  capabilities.setCapability("deviceName", "F4AZFG142115");
   capabilities.setCapability("browserName", "Android");
-  capabilities.setCapability("platformVersion", "4.4.2");
+  capabilities.setCapability("platformVersion", "5.0.1");
   capabilities.setCapability("platformName", "Android");
   capabilities.setCapability("appPackage", "io.appium.android.apis");
   capabilities.setCapability("appActivity","io.appium.android.apis.ApiDemos");

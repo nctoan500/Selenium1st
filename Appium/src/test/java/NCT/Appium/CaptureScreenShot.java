@@ -29,12 +29,12 @@ public class CaptureScreenShot {
 	@BeforeTest
 	public void setUp() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "ZX1B32FFXF");
+		capabilities.setCapability("deviceName", "cca223a6d8c5");
 		capabilities.setCapability("browserName", "Android");
-		capabilities.setCapability("platformVersion", "4.4.2");
+		capabilities.setCapability("platformVersion", "4.3");
 		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("appPackage", "io.appium.android.apis");
-		capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+		capabilities.setCapability("appPackage", "com.hmh.api");
+		capabilities.setCapability("appActivity", "com.hmh.api.ApiDemos");
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
@@ -61,14 +61,14 @@ public class CaptureScreenShot {
 		// Set folder name to store screenshots.
 		destDir = "screenshots";
 		
+		// Create folder under project with name "screenshots" provided to destDir.
+		new File(destDir).mkdirs();
+		
 		// Capture screenshot.
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
 		// Set date format to set It as screenshot file name.
 		dateFormat = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
-		
-		// Create folder under project with name "screenshots" provided to destDir.
-		new File(destDir).mkdirs();
 		
 		// Set file name using current date time.
 		String destFile = dateFormat.format(new Date()) + ".png";
