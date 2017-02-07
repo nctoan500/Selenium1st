@@ -1,6 +1,5 @@
 package NCT.Appium;
 
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.net.URL;
@@ -13,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ScrollingToText {
+	@SuppressWarnings("rawtypes")
 	AndroidDriver driver;
 
 	@BeforeTest
