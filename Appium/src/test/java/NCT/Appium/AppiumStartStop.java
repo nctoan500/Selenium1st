@@ -16,7 +16,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class AppiumStartStop {
- static AndroidDriver driver;
+ @SuppressWarnings("rawtypes")
+static AndroidDriver driver;
  // Set path of your node.exe file. Set your path.
  // Progra~1 represents Program Files folder.
  String nodePath = "C:/Program Files (x86)/Appium/node.exe";
@@ -68,7 +69,8 @@ public class AppiumStartStop {
   executor.execute(command, resultHandler);
  }
 
- @BeforeTest
+ @SuppressWarnings("rawtypes")
+@BeforeTest
  public void setUp() throws Exception {
   // Start appium server.
   appiumStart();

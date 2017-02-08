@@ -22,7 +22,8 @@ import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 
 public class VideoReord {
- static AndroidDriver driver;
+ @SuppressWarnings("rawtypes")
+static AndroidDriver driver;
  // Set path of your node.exe file. Set your path.
  // Progra~1 represents Program Files folder.
  String nodePath = "C:/Program Files (x86)/Appium/node.exe";
@@ -31,7 +32,8 @@ public class VideoReord {
 
  ATUTestRecorder recorder;
 
- @BeforeTest
+ @SuppressWarnings("rawtypes")
+@BeforeTest
  public void setUp() throws Exception {
   // Start appium server.
   appiumStart();

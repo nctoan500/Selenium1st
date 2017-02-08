@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SetDate {
-	AndroidDriver driver;
+	AndroidDriver<WebElement> driver;
 
 	@BeforeTest
 	public void setUp() throws Exception {
@@ -25,7 +25,7 @@ public class SetDate {
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("appPackage", "com.hmh.api");
 		capabilities.setCapability("appActivity", "com.hmh.api.ApiDemos");
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		capabilities.setCapability("unicodeKeyboard", "true");
 		capabilities.setCapability("resetKeyboard", "true");

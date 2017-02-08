@@ -13,17 +13,19 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TapOnSwitch {
- AndroidDriver driver;
+ @SuppressWarnings("rawtypes")
+AndroidDriver driver;
 
- @BeforeTest
+ @SuppressWarnings("rawtypes")
+@BeforeTest
  public void setUp() throws Exception {
   DesiredCapabilities capabilities = new DesiredCapabilities();
-  capabilities.setCapability("deviceName", "ZX1B32FFXF");
+  capabilities.setCapability("deviceName", "emulator-5554");
   capabilities.setCapability("browserName", "Android");
-  capabilities.setCapability("platformVersion", "4.4.2");
+  capabilities.setCapability("platformVersion", "4.2.2");
   capabilities.setCapability("platformName", "Android");
-  capabilities.setCapability("appPackage", "io.appium.android.apis");
-  capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+  capabilities.setCapability("appPackage", "com.example.android.apis");
+  capabilities.setCapability("appActivity", "com.example.android.apis.ApiDemos");
   driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
   driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
  }
@@ -44,7 +46,7 @@ public class TapOnSwitch {
   driver.findElement(By.name("Switches")).click();
   
   //Get status of switch using it's text.
-  String switchStatus1 = driver.findElementById("io.appium.android.apis:id/monitored_switch").getText();
+  String switchStatus1 = driver.findElementById("com.example.android.apis:id/monitored_switch").getText();
   System.out.println(switchStatus1);
   //If switchStatus1 = Monitored switch OFF, Execute inner code.
   if((switchStatus1.trim()).equals("Monitored switch OFF")){
@@ -59,7 +61,7 @@ public class TapOnSwitch {
   Thread.sleep(5000);
   
   //Get status of switch using it's text.
-  String switchStatus2 = driver.findElementById("io.appium.android.apis:id/monitored_switch").getText();
+  String switchStatus2 = driver.findElementById("com.example.android.apis:id/monitored_switch").getText();
   System.out.println(switchStatus2);
   //If switchStatus1 = Monitored switch ON, Execute inner code.
   if((switchStatus2.trim()).equals("Monitored switch ON")){

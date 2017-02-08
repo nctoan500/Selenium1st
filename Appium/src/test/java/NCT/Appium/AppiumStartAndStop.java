@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class AppiumStartAndStop {
+	@SuppressWarnings("rawtypes")
 	AndroidDriver driver;
 	Process p;
 	// Set path of your node.exe file.
@@ -44,6 +45,7 @@ public class AppiumStartAndStop {
 		System.out.println("Appium server Is stopped now.");
 	}
 
+	@SuppressWarnings("rawtypes")
 	@BeforeTest
 	public void setUp() throws Exception {
 		// Stop appium server If It Is already running.

@@ -3,8 +3,10 @@ package NCT.Appium;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
@@ -16,10 +18,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SwipeAction {
+	@SuppressWarnings("rawtypes")
 	AndroidDriver driver;
 	Dimension size;
 	WebDriverWait wait;
 
+	@SuppressWarnings("rawtypes")
 	@BeforeTest
 	public void setUp() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -49,6 +53,7 @@ public class SwipeAction {
 		int x2 = (int) (size.width * 0.80);
 
 		//Create object of TouchAction class.
+		@SuppressWarnings("rawtypes")
 		TouchAction action = new TouchAction((MobileDriver) driver);
 
 		//Find element to swipe from right to left.

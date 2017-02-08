@@ -12,8 +12,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SelectValueDropDown {
+	@SuppressWarnings("rawtypes")
 	AndroidDriver driver;
 
+	@SuppressWarnings("rawtypes")
 	@BeforeTest
 	public void setUp() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();

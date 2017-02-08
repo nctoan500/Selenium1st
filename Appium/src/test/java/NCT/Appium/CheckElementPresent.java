@@ -23,8 +23,8 @@ public class CheckElementPresent {
   capabilities.setCapability("browserName", "Android");
   capabilities.setCapability("platformVersion", "5.0");
   capabilities.setCapability("platformName", "Android");
-  capabilities.setCapability("appPackage", "io.appium.android.apis");
-  capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+  capabilities.setCapability("appPackage", "com.hmh.api");
+  capabilities.setCapability("appActivity", "com.hmh.api.ApiDemos");
   driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
   driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
  }
