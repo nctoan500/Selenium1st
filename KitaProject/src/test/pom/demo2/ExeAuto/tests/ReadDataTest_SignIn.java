@@ -1,4 +1,4 @@
-package pom.demo2_ExeAuto.tests;
+package pom.demo2.ExeAuto.tests;
 
 import java.io.IOException;
 

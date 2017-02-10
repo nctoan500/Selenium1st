@@ -1,4 +1,4 @@
-package pom.demo2_ExeAuto.tests;
+package pom.demo2.ExeAuto.tests;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import jxl.read.biff.BiffException;
-import pom.demo2_ExeAuto.webpages.GoogleHomePageObjects;
-import pom.demo2_ExeAuto.webpages.SeleniumPageObjects;
+import pom.demo2.ExeAuto.webpages.GoogleHomePageObjects;
+import pom.demo2.ExeAuto.webpages.SeleniumPageObjects;
 
 public class GoogleSearchTest {
 
