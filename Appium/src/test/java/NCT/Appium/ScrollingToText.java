@@ -18,12 +18,12 @@ public class ScrollingToText {
 	@BeforeTest
 	public void setUp() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "cca223a6d8c5");
+		capabilities.setCapability("deviceName", "emulator-5554");
 		capabilities.setCapability("browserName", "Android");
 		capabilities.setCapability("platformVersion", "4.3");
 		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("appPackage", "com.hmh.api");
-		capabilities.setCapability("appActivity", "com.hmh.api.ApiDemos");
+		capabilities.setCapability("appPackage", "com.example.android.apis");
+		capabilities.setCapability("appActivity", "com.example.android.apis.ApiDemos");
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
