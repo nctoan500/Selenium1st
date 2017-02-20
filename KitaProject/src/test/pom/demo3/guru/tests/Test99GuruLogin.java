@@ -24,9 +24,9 @@ public class Test99GuruLogin {
 	}
 
 	/**
-	 * This test case will login in http://demo.guru99.com/V4/ Verify login page
-	 * title as guru99 bank Login to application Verify the home page using
-	 * Dashboard message
+	 * This test go to http://demo.guru99.com/V4/ Verify login page title as
+	 * guru99 bank Login to application Verify the home page using Dashboard
+	 * message
 	 */
 
 	@Test(priority = 0)
@@ -49,3 +49,9 @@ public class Test99GuruLogin {
 				.toLowerCase().contains("manger id : mngr65981"));
 	}
 }
+
+/*
+ * Page:
+ * http://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate
+ * -guide.html
+ */
