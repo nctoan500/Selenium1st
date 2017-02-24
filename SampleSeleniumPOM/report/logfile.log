@@ -1,0 +1,18 @@
+2017-02-23 17:44:25,383 INFO  [Log] SETUP BROWSER 
+2017-02-23 17:44:35,096 INFO  [Log] ----------START---------------------------------------------------------------------------- 
+2017-02-23 17:44:35,097 INFO  [Log] ----------test_Home_Page_Appear_Correct 
+2017-02-23 17:44:35,097 INFO  [Log] [OR] Login page 
+2017-02-23 17:44:35,183 INFO  [Log] [OR] getLoginTitle [Guru99 Bank] 
+2017-02-23 17:44:35,214 INFO  [Log] [OR] loginToWeb [mngr65981][jyhaqUh] 
+2017-02-23 17:44:35,215 INFO  [Log] [OR] setUserName [mngr65981] 
+2017-02-23 17:44:35,414 INFO  [Log] [OR] setPassword [jyhaqUh] 
+2017-02-23 17:44:36,615 INFO  [Log] [OR] clickLogin 
+2017-02-23 17:44:37,018 INFO  [Log] [OR] HomePage 
+2017-02-23 17:44:37,931 INFO  [Log] [OR] getHomePageDashboardUserName [Manger Id : mngr65981] 
+2017-02-23 17:44:37,976 INFO  [Log] ----------END-----------------------------------------------------------------------------
+
+ 
+2017-02-23 17:44:37,979 INFO  [Log] ----------START---------------------------------------------------------------------------- 
+2017-02-23 17:44:37,979 INFO  [Log] ----------test_Home_Page_Appear_Wrong 
+2017-02-23 17:44:38,025 INFO  [Log] [OR] getHomePageDashboardUserName [Manger Id : mngr65981] 
+2017-02-23 17:44:38,067 INFO  [Log] CLOSE BROWSER 
